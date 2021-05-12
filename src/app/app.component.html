@@ -1,4 +1,4 @@
-<h1>Angular Gadget Example</h1>
+<h1>Angular Gadget Interop Test Harness</h1>
 
 <h2>Local Time: {{ localTime  | date:'medium' }}</h2>
 <h2>Device Time: {{ deviceTime  | date:'medium' }}</h2>
@@ -12,3 +12,4 @@
 <button (click)="sendCommand()">Send Command</button>
 <button (click)="trackEvent()">Track Event</button>
 <button (click)="callback()">Callback</button>
+<button (click)="sendRemoteCommand()">Send Remote Command</button><input type="text" [(ngModel)]="remoteDeviceKey">

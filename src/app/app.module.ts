@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 import localeFr from '@angular/common/locales/fr';
 import localeRu from '@angular/common/locales/ru';
+import { FormsModule } from '@angular/forms';
 registerLocaleData(localeFr);
 registerLocaleData(localeRu);
 
@@ -18,6 +19,7 @@ registerLocaleData(localeRu);
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     PlayerClientModule
   ],
   providers: [
