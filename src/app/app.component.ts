@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   deviceKey: any;
   revelRoot: any;
   remoteDeviceKey: any;
+  commandMap: any;
 
 
   constructor(public client: PlayerClientService) {
@@ -65,6 +66,12 @@ export class AppComponent implements OnInit {
       this.revelRoot = res;
     })
 
+    this.client.getCommandMap().then((res) => {
+
+      if (res) {
+        this.commandMap = Object.keys(res);
+      }
+    });
   }
 
   sendCommand() {
